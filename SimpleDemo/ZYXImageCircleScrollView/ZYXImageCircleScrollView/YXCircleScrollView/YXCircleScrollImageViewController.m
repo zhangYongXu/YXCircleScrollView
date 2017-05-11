@@ -8,10 +8,7 @@
 
 #import "YXCircleScrollImageViewController.h"
 #import "YXImageViewController.h"
-//#import "UIView+ITTAdditions.h"
-//#import "UIColor+HEX.h"
-//#import "Aspects.h"
-//#import "ZYXWilddog.h"
+
 
 
 @interface YXCircleScrollImageViewController()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
