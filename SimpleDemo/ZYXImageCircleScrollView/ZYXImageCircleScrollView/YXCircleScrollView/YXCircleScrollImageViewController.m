@@ -365,7 +365,7 @@
 -(YXImageViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     YXImageViewController * pageContentViewController = [[YXImageViewController alloc] init];
-    __weak typeof(self) weakSelf = self;
+    __unsafe_unretained typeof(self) weakSelf = self;
     [pageContentViewController setSingleTapHandle:^(YXImageViewController *imageViewController, UITapGestureRecognizer *tapGesture) {
         if(weakSelf.imageSingleTapHandleBlock){
             weakSelf.imageSingleTapHandleBlock(imageViewController.pageIndex);

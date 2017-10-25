@@ -58,7 +58,7 @@
         }else{
             self.downloadTipLabel.text = @"图片正在载入...";
             self.downloadTipLabel.hidden = NO;
-            __weak typeof (self) weakSelf = self;
+            __unsafe_unretained typeof (self) weakSelf = self;
             if(self.downloadNetImageStartBlock){
                 self.downloadNetImageStartBlock();
             }

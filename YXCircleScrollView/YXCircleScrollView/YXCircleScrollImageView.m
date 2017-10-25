@@ -140,7 +140,7 @@
             self.singleTapHandle(pageIndex);
         }
     }];
-    __weak typeof(self) weakSelf = self;
+    __unsafe_unretained typeof(self) weakSelf = self;
     self.circleScrollView.pageChangedBlock = ^(NSInteger pageIndex){
         if(weakSelf.imagePageChanged){
             weakSelf.imagePageChanged(pageIndex);

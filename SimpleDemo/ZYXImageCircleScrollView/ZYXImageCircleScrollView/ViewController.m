@@ -37,7 +37,7 @@
 -(void)createCircleScorllImageViewLocal{
     CGRect frame = CGRectZero;
     frame.size = self.localImageCircleView.frame.size;
-    __weak typeof(self) weakSelf = self;
+    __unsafe_unretained typeof(self) weakSelf = self;
     YXCircleScrollImageView * view = [YXCircleScrollImageView circleScrollImageViewWithFrame:frame ImageNumber:^NSInteger(YXCircleScrollImageView *view) {
         return 6;
     } ImageOrUrlAtIndex:^id(NSInteger index) {
@@ -66,7 +66,7 @@
     
     CGRect frame = CGRectZero;
     frame.size = self.networkImageCircleView.frame.size;
-    __weak typeof(self) weakSelf = self;
+    __unsafe_unretained typeof(self) weakSelf = self;
     YXCircleScrollImageView * view = [YXCircleScrollImageView circleScrollImageViewWithFrame:frame ImageNumber:^NSInteger(YXCircleScrollImageView *view) {
         NSInteger count = urlArray.count;
         return count;
